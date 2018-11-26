@@ -1,8 +1,8 @@
-def call(String server, String username, String password) {
+def call(String serveruri, String username, String password) {
 
-    def server = Artifactory.newServer url: '${server}', username: '${username}', password: '${password}'
+    def server = Artifactory.newServer url: '${serveruri}', username: '${username}', password: '${password}'
 
-    echo '${server} ${username} ${password}'
+    echo '${serveruri} ${username} ${password}'
 
     
     
