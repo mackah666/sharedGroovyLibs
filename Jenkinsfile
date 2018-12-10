@@ -1,20 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @mackah666 Sign out
-1
-0 0 mackah666/sharedGroovyLibs
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-sharedGroovyLibs/Jenkinsfile
-e44c606  7 minutes ago
-@mackah666 mackah666 Added Jenkinsfile
-      
-47 lines (45 sloc)  735 Bytes
 pipeline {
   agent any
   stages {
