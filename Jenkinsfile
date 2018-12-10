@@ -6,5 +6,10 @@ pipeline {
         sleep 10
       }
     }
+    stage('get more done') {
+      steps {
+        echo 'Getting stuff done'
+      }
+    }
   }
 }
