@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Keep going 2') {
           steps {
-            echo 'Hello'
+            echo 'Hello 2'
           }
         }
       }
