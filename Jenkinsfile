@@ -38,5 +38,10 @@ pipeline {
         echo 'Step three'
       }
     }
+    stage('Npm Ver') {
+      steps {
+        sh 'npm -v'
+      }
+    }
   }
 }
