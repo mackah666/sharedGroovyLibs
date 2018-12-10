@@ -38,5 +38,10 @@ pipeline {
         echo 'Step three'
       }
     }
+    stage('Deploy') {
+      steps {
+        input 'Do you wish to promote?'
+      }
+    }
   }
 }
