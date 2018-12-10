@@ -28,5 +28,15 @@ pipeline {
         }
       }
     }
+    stage('Nearly') {
+      steps {
+        timestamps() {
+          echo 'Step one'
+        }
+
+        echo 'Step two'
+        echo 'Step three'
+      }
+    }
   }
 }
