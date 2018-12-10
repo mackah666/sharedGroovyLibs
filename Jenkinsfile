@@ -1,47 +1,15 @@
 pipeline {
-  agent any
-  stages {
-    stage('Get stuff done') {
-      steps {
-        sleep 10
-      }
+    agent {
+        docker {
+            image 'node:6-alpine' 
+            args '-p 3000:3000' 
+        }
     }
-    stage('get more done') {
-      steps {
-        echo 'Getting stuff done'
-      }
-    }
-    stage('Keep going') {
-      parallel {
-        stage('Keep going') {
-          steps {
-            retry(count: 10) {
-              echo 'Hello'
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm -v' 
             }
-
-          }
         }
-        stage('Keep going 2') {
-          steps {
-            echo 'Hello 2'
-          }
-        }
-      }
     }
-    stage('Nearly') {
-      steps {
-        timestamps() {
-          echo 'Step one'
-        }
-
-        echo 'Step two'
-        echo 'Step three'
-      }
-    }
-    stage('Npm Ver') {
-      steps {
-        sh 'npm -v'
-      }
-    }
-  }
 }
