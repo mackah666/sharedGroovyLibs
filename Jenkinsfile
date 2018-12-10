@@ -11,5 +11,13 @@ pipeline {
         echo 'Getting stuff done'
       }
     }
+    stage('Keep going') {
+      steps {
+        retry(count: 10) {
+          echo 'Hello'
+        }
+
+      }
+    }
   }
 }
