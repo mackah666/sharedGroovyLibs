@@ -12,11 +12,20 @@ pipeline {
       }
     }
     stage('Keep going') {
-      steps {
-        retry(count: 10) {
-          echo 'Hello'
-        }
+      parallel {
+        stage('Keep going') {
+          steps {
+            retry(count: 10) {
+              echo 'Hello'
+            }
 
+          }
+        }
+        stage('Keep going 2') {
+          steps {
+            echo 'Hello'
+          }
+        }
       }
     }
   }
